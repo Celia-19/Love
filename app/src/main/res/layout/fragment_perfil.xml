@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PerfilFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blanco">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Encabezado del Perfil -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/fondo_muro"
+                android:layout_marginBottom="24dp">
+
+                <!-- Imagen de Perfil -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/profileImage"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circle_background"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_profile_placeholder" />
+
+                    <ImageButton
+                        android:id="@+id/btnEditProfilePic"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignEnd="@id/profileImage"
+                        android:layout_alignBottom="@id/profileImage"
+                        android:background="@drawable/circle_background"
+                        android:contentDescription="Cambiar foto de perfil"
+                        android:src="@android:drawable/ic_menu_edit" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <!-- Sección Mi Cuenta -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/section_background"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mi Cuenta"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dorado"
+                    android:paddingBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre de usuario:" />
+
+                <TextView
+                    android:id="@+id/tvUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre del Usuario"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Correo electrónico:" />
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="correo@ejemplo.com"
+                    android:textSize="16sp"
+                    android:paddingBottom="16dp" />
+
+                <Button
+                    android:id="@+id/btnChangePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cambiar Contraseña"
+                    android:backgroundTint="@color/dorado"
+                    android:textColor="@color/blanco" />
+            </LinearLayout>
+
+            <!-- Sección El Día -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/section_background"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="El Día"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dorado"
+                    android:paddingBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvNovio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Novio: Nombre del Novio" />
+
+                <TextView
+                    android:id="@+id/tvNovia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Novia: Nombre de la Novia" />
+
+                <TextView
+                    android:id="@+id/tvFecha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:text="Fecha: dd/mm/yyyy" />
+
+                <Button
+                    android:id="@+id/btnFollowMyDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mi Día"
+                    android:backgroundTint="@color/dorado"
+                    android:textColor="@color/blanco"
+                    android:layout_marginBottom="8dp" />
+
+                <Button
+                    android:id="@+id/btnGuestList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Invitados"
+                    android:backgroundTint="@color/dorado"
+                    android:textColor="@color/blanco" />
+            </LinearLayout>
+
+            <!-- Sección Facturación -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/section_background"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Facturación"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dorado"
+                    android:paddingBottom="8dp" />
+
+                <CheckBox
+                    android:id="@+id/cbEnableBilling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Habilitar datos de facturación"
+                    android:paddingBottom="16dp" />
+
+                <EditText
+                    android:id="@+id/etRFC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="RFC"
+                    android:enabled="false" />
+
+                <EditText
+                    android:id="@+id/etBillingName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre"
+                    android:enabled="false" />
+
+                <EditText
+                    android:id="@+id/etBillingAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Domicilio"
+                    android:enabled="false" />
+
+                <EditText
+                    android:id="@+id/etBillingPostalCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Código Postal"
+                    android:enabled="false" />
+
+                <EditText
+                    android:id="@+id/etBillingFiscalRegime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Régimen Fiscal"
+                    android:enabled="false" />
+
+                <Button
+                    android:id="@+id/btnSubmitBilling"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Enviar Facturación"
+                    android:backgroundTint="@color/dorado"
+                    android:textColor="@color/blanco"
+                    android:enabled="false" />
+                <TextView
+                    android:id="@+id/tvBillingInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No hay datos de facturación disponibles"
+                    android:padding="8dp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Botón Cerrar Sesión -->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cerrar Sesión"
+                android:backgroundTint="@color/negro"
+                android:textColor="@color/blanco"
+                android:layout_marginTop="24dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

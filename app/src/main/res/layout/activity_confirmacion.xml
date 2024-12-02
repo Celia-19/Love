@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ConfirmacionActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <!-- Mensaje de agradecimiento -->
+        <TextView
+            android:id="@+id/tvThankYou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¡Gracias por su preferencia!"
+            android:textSize="20sp"
+            android:textColor="@color/negro"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Imagen de palomita -->
+        <ImageView
+            android:id="@+id/ivSuccessIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_success"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Detalles del pago -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="El pago con la tarjeta terminación 1234 ha sido realizado con éxito."
+            android:textSize="16sp"
+            android:textColor="@color/negro"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Nota adicional -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Se necesitan que los datos de tu perfil estén completos. Continúa con tu registro"
+            android:textSize="14sp"
+            android:textColor="@color/dorado"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Botón a Mi Día -->
+        <Button
+            android:id="@+id/btnGoToMyDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Completa tu perfil"
+            android:backgroundTint="@color/colorGold"
+            android:textColor="@color/blanco" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EfectivoFragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvCashInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Realiza tu pago en efectivo en el punto más cercano."
+            android:textSize="16sp"
+            android:textColor="@color/negro"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnPayCash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/black"
+            android:text="Contacto"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</FrameLayout>
